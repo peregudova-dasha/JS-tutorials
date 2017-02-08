@@ -4,14 +4,18 @@
 */
 
 var arr = ["HTML", "JavaScript", "CSS"];
-
-function compareNumeric(a, b) {
-    if (a > b) return 1;
-    if (a < b) return -1;
-    return 0;
+var newArr = [];
+for(var i=0; i<arr.length;i++){
+  newArr.push(arr[i]);
 }
 
-var newArr = arr.sort(compareNumeric);
+
+newArr.sort(function compareNumeric(a, b) {
+    if (a > b) return 1;
+    if (a < b) return -1; 
+    return 0;
+});
+
 
 
 console.log( newArr ); // CSS, HTML, JavaScript
